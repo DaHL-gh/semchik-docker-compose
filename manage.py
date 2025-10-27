@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 import os
+from sqlite3 import OperationalError
 import sys
 
 if __name__ == '__main__':
