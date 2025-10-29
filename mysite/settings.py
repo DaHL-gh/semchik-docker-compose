@@ -76,17 +76,12 @@ WSGI_APPLICATION = "mysite.wsgi.application"
 
 DATABASES = {
     "default": {
-        "ENGINE": "django.db.backends.postgresql",
-        # "NAME": "django-polls",
-        # "USER": "semchik",
-        # "PASSWORD": "12345678",
-        # "HOST": "localhost",
-        # "PORT": 5432,  # например 5432
+        "ENGINE": os.getenv("DB_ENGINE"),
         "NAME": os.getenv("DB_NAME"),
         "USER": os.getenv("DB_USERNAME"),
         "PASSWORD": os.getenv("DB_PASSWORD"),
         "HOST": os.getenv("DB_HOST"),
-        "PORT": os.getenv("DB_PORT"),  # например 5432
+        "PORT": os.getenv("DB_PORT"),
     }
 }
 
